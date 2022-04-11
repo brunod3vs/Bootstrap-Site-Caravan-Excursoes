@@ -9,6 +9,35 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+  <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Entre na sua conta</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="inputEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Nós nunca compartilharemos com ninguém seus dados.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="loginSenha" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="loginSenha">
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar na Conta</button>
+                <small><div class="form-text">Esqueceu a senha? <a class="text-decoration-none"  href="#">Clique aqui</a></div></small>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Inicio Navbar-->
       <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top p-4 box-shadow">
           <a href="index.html" class="navbar-brand">
             <img src="img/caravan.svg" alt="Caravan">
@@ -19,15 +48,15 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" href="#">Locais</a>
+                    <a class="nav-link dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" href="#">Locais</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="#">California</a></li>
-                        <li><a class="dropdown-item" href="#">Paris</a></li>
-                        <li><a class="dropdown-item" href="#">Dublin</a></li>
+                        <li><a class="dropdown-item" href="local.html">California</a></li>
+                        <li><a class="dropdown-item" href="local.html">Paris</a></li>
+                        <li><a class="dropdown-item" href="local.html">Dublin</a></li>
                       </ul>
                   </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="planos.html">Planos</a>
@@ -36,7 +65,7 @@
                   <a class="nav-link" href="contato.html">Contato</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Login</a>
                   </li>
                   <li class="nav-item">
                     <a class="btn btn-outline-primary mx-md-2" href="#">Inscreva-se</a>
@@ -44,7 +73,7 @@
               </ul>
           </div>
       </nav>
-      
+    <!-- Fim Navbar-->
 
 
 
